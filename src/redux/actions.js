@@ -8,7 +8,7 @@ const key = process.env.REACT_APP_API_KEY;
 
 export const getMoviesByName = (name) => {
   return async (dispatch) => {
-    const dataApi = await axios.get(`http://www.omdbapi.com/?apikey=${key}&s=${name}`);
+    const dataApi = await axios.get(`https://www.omdbapi.com/?apikey=${key}&s=${name}`);
     dispatch({type: GET_MOVIES_BY_NAME, payload: dataApi.data.Search});
   }
 }
